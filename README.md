@@ -13,8 +13,8 @@
         ImagesStitch.init(this);
     }
 ```
-3. 混淆代码
--keep public class com.lerp.pano.ImagesStitch { *; }
+3. 将你的应用包名修改成"com.lerp.demo"进行测试
+4. 混淆代码 -keep public class com.lerp.pano.ImagesStitch { *; }
 
 ## API使用说明
 ```
@@ -56,7 +56,6 @@
 [点击下载](https://www.pgyer.com/BQr0)，密码:123456
 
 ## 联系我
-- 目前SDK已商用，内部进行了一些处理，测试的时候可以将你的应用包名修改成"com.lerp.demo"。
-  开发不易，授权会收取少量费用，如果你觉得有一定商业价值，请联系我
+- 目前SDK已商用，内部进行了一些处理，开发不易，授权会收取少量费用，如果你觉得有一定商业价值，请联系我
 - 电话/微信 17512006887
 - QQ 495572997
