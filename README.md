@@ -19,14 +19,18 @@
 ## API使用说明
 ```
     /**
-     * @param path           输入图片路径
-     * @param outPath        输出图片路径
-     * @param panoType       全景类型，0球面，1圆柱，2立体，3三明治
-     * @param waveCorrection 波段修正，水平或垂直
-     * @param widthRatio     宽度最多裁掉的比例，范围0~1，为0表示宽度不需要裁剪
-     * @param heightRatio    高度最多裁掉的比例,范围0~1，为0表示高度不需要裁剪
-     * @param length         裁剪系数，值越大裁减的比例越少，参考值300，单位是pixel
-     * @param scale          图像质量，范围0~1，为1时表示以原画进行合成
+     * @param path           输入图片绝对路径
+     * @param outPath        输出图片绝对路径
+     * @param panoType       全景照片类型，0球面，1圆柱，2小行星,3直线
+     * @param correction     波段修正，水平或垂直，拼接竖直照片的时候需要设置成垂直修正
+     * @param widthRatio     拼接后的照片四周会有黑边，这个参数用来消除宽度上的黑边，
+     *                       表示宽度最多裁掉的比例，范围0~1，为0表示宽度不需要裁剪
+     * @param heightRatio    拼接后的照片四周会有黑边，这个参数用来消除高度上的黑边，
+     *                       高度最多裁掉的比例,范围0~1，为0表示高度不需要裁剪
+     * @param length         裁剪系数，和widthRatio和HeightRatio一起使用，
+     *                       值越小裁剪的越多，参考值300，单位是pixel
+     * @param scale          压缩系数，是否需要压缩照片质量，范围0~1，为1时表示以原画质进行合成，
+     *                       当内存不够或者拼接时间过长的时候，请适当调小该参数
      * @return 返回长度为3的字节数组
      * [0]合成结果状态码
      * [1]合成后宽度
@@ -45,6 +49,14 @@
 - 合成小行星照片
 ![](/result/stereo.jpg)
 
+- 合成360全景
+![](/result/panorama.jpg)
+
+## Demo下载
+[点击下载](https://www.pgyer.com/BQr0)，密码:123456
+
 ## 联系我
+- 目前SDK已商用，内部进行了一些处理，测试的时候可以将你的应用包名修改成"com.lerp.demo"。
+  开发不易，授权会收取少量费用，如果你觉得有一定商业价值，请联系我
 - 电话/微信 17512006887
 - QQ 495572997
