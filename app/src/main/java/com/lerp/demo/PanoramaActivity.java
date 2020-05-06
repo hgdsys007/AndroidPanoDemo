@@ -43,7 +43,7 @@ public class PanoramaActivity extends AppCompatActivity {
                 final String image_1 = ActivityMain.DIR + "image_1.jpg";
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_1,
                         TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 300, 0.8f);
+                        0.16f, 0.05f, 200, 0.8f);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -57,7 +57,7 @@ public class PanoramaActivity extends AppCompatActivity {
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_2,
                         TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 300, 0.8f);
+                        0.16f, 0.05f, 200, 0.8f);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -71,7 +71,7 @@ public class PanoramaActivity extends AppCompatActivity {
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_3,
                         TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 300, 0.8f);
+                        0.16f, 0.05f, 200, 0.8f);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -85,7 +85,7 @@ public class PanoramaActivity extends AppCompatActivity {
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_4,
                         TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 300, 0.8f);
+                        0.16f, 0.05f, 200, 0.8f);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -99,7 +99,7 @@ public class PanoramaActivity extends AppCompatActivity {
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_5,
                         TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 300, 0.8f);
+                        0.16f, 0.05f, 200, 0.8f);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -113,7 +113,7 @@ public class PanoramaActivity extends AppCompatActivity {
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_6,
                         TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 300, 0.8f);
+                        0.16f, 0.05f, 200, 0.8f);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -138,11 +138,11 @@ public class PanoramaActivity extends AppCompatActivity {
                 final String result = ActivityMain.DIR + "result.jpg";
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, result,
                         ImagesStitch.TYPE_SPHERICAL, ImagesStitch.CORRECTION_HORI,
-                        0f, 0f, 20, 0.6f);
+                        0.005f, 0f, 50, 0.6f);
 
                 final String result360 = ActivityMain.DIR + "result360.jpg";
 
-                ImagesStitch.toPano360(result, result360, 0.2f, 0);
+                ImagesStitch.toPano360(result, result360, 0.1f, 0);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {

@@ -14,7 +14,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
-        android:text="竖拍全景"
+        android:text="垂直"
         android:textColor="@color/colorPrimaryDark" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -22,7 +22,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:text="9宫格全景"
+        android:text="广角"
         android:textColor="@color/colorPrimaryDark" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -30,7 +30,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:text="360全景"
+        android:text="360"
         android:textColor="@color/colorPrimaryDark" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -38,6 +38,6 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:text="小行星全景"
+        android:text="球形"
         android:textColor="@color/colorPrimaryDark" />
 </LinearLayout>

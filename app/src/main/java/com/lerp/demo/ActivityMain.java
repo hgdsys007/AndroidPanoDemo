@@ -50,7 +50,7 @@ public class ActivityMain extends AppCompatActivity {
         findViewById(R.id.btn_3x3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityMain.this.startActivity(new Intent(ActivityMain.this, NineActivity.class));
+                ActivityMain.this.startActivity(new Intent(ActivityMain.this, WideActivity.class));
             }
         });
 

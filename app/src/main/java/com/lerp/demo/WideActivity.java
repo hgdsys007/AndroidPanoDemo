@@ -11,7 +11,7 @@ import com.shizhefei.view.largeimage.factory.FileBitmapDecoderFactory;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class NineActivity extends AppCompatActivity {
+public class WideActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,20 +28,20 @@ public class NineActivity extends AppCompatActivity {
             public void run() {
                 //示例图片便宜比较大，这里用6张就够了
                 Bitmap[] bitmaps = new Bitmap[6];
-                bitmaps[0] = BitmapUtils.getBitmap(NineActivity.this, "medium04.jpg");
-                bitmaps[1] = BitmapUtils.getBitmap(NineActivity.this, "medium05.jpg");
-                bitmaps[2] = BitmapUtils.getBitmap(NineActivity.this, "medium07.jpg");
-                bitmaps[3] = BitmapUtils.getBitmap(NineActivity.this, "medium08.jpg");
-                bitmaps[4] = BitmapUtils.getBitmap(NineActivity.this, "medium10.jpg");
-                bitmaps[5] = BitmapUtils.getBitmap(NineActivity.this, "medium11.jpg");
+                bitmaps[0] = BitmapUtils.getBitmap(WideActivity.this, "medium04.jpg");
+                bitmaps[1] = BitmapUtils.getBitmap(WideActivity.this, "medium05.jpg");
+                bitmaps[2] = BitmapUtils.getBitmap(WideActivity.this, "medium07.jpg");
+                bitmaps[3] = BitmapUtils.getBitmap(WideActivity.this, "medium08.jpg");
+                bitmaps[4] = BitmapUtils.getBitmap(WideActivity.this, "medium10.jpg");
+                bitmaps[5] = BitmapUtils.getBitmap(WideActivity.this, "medium11.jpg");
 
                 final String result = ActivityMain.DIR + "nine.jpg";
                 int[] ints = ImagesStitch.stitchImagesFromBitmaps(bitmaps, result,
                         ImagesStitch.TYPE_SPHERICAL, ImagesStitch.CORRECTION_DEFAULT,
-                        0.16f, 0.16f, 200, 1f);
+                        0.1f, 0.1f, 50, 1f);
 
-                if (ints[0] == 0 && !NineActivity.this.isDestroyed()) {
-                    NineActivity.this.runOnUiThread(new Runnable() {
+                if (ints[0] == 0 && !WideActivity.this.isDestroyed()) {
+                    WideActivity.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             progressBar.setVisibility(View.GONE);

@@ -29,7 +29,7 @@ public class StereographicActivity extends AppCompatActivity {
         mViewGroup = findViewById(R.id.root_view);
 
         TextView tvMessage = findViewById(R.id.tv_message);
-        tvMessage.setText("合成一张小行星照片，具体拍摄的方式可以自己设定，不同的相机需要自己调整参数。先竖向拼接，再横向拼接成一张小行星。" +
+        tvMessage.setText("合成一张球形照片，具体拍摄的方式可以自己设定，不同的相机需要自己调整参数。先竖向拼接，再横向拼接成一张球形。" +
                 "也可以将所有照片一次性传进去，造成的结果就是拼接时间长和内存溢出。");
 
         new Thread(new Runnable() {
@@ -43,7 +43,7 @@ public class StereographicActivity extends AppCompatActivity {
                 final String image_1 = ActivityMain.DIR + "image_1.jpg";
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_1,
                         TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 300, 0.8f);
+                        0.16f, 0.05f, 200, 0.8f);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -58,7 +58,7 @@ public class StereographicActivity extends AppCompatActivity {
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_2,
                         TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 300, 0.8f);
+                        0.16f, 0.05f, 200, 0.8f);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -72,7 +72,7 @@ public class StereographicActivity extends AppCompatActivity {
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_3,
                         TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 300, 0.8f);
+                        0.16f, 0.05f, 200, 0.8f);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -88,7 +88,7 @@ public class StereographicActivity extends AppCompatActivity {
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_4,
                         TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 300, 0.8f);
+                        0.16f, 0.05f, 200, 0.8f);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -103,7 +103,7 @@ public class StereographicActivity extends AppCompatActivity {
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_5,
                         TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 300, 0.8f);
+                        0.16f, 0.05f, 200, 0.8f);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -117,7 +117,7 @@ public class StereographicActivity extends AppCompatActivity {
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_6,
                         TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 300, 0.8f);
+                        0.16f, 0.05f, 200, 0.8f);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -140,7 +140,7 @@ public class StereographicActivity extends AppCompatActivity {
                 final String result = ActivityMain.DIR + "result.jpg";
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, result,
                         ImagesStitch.TYPE_STEREOGRAPHIC, ImagesStitch.CORRECTION_DEFAULT,
-                        0.2f, 0.2f, 200, 0.6f);
+                        0.2f, 0.2f, 50, 0.6f);
 
                 runOnUiThread(new Runnable() {
                     @Override
