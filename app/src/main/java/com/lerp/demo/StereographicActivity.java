@@ -13,7 +13,6 @@ import com.shizhefei.view.largeimage.factory.FileBitmapDecoderFactory;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import static com.lerp.pano.ImagesStitch.TYPE_LINEAR;
 
 public class StereographicActivity extends AppCompatActivity {
 
@@ -42,8 +41,8 @@ public class StereographicActivity extends AppCompatActivity {
 
                 final String image_1 = ActivityMain.DIR + "image_1.jpg";
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_1,
-                        TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 200, 0.8f);
+                        ImagesStitch.TYPE_PLANE, ImagesStitch.WAVE_VERT,
+                        0.16f, 0.05f, 200, 0.8f,90);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -57,8 +56,8 @@ public class StereographicActivity extends AppCompatActivity {
                 final String image_2 = ActivityMain.DIR + "image_2.jpg";
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_2,
-                        TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 200, 0.8f);
+                        ImagesStitch.TYPE_PLANE, ImagesStitch.WAVE_VERT,
+                        0.16f, 0.05f, 200, 0.8f,90);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -71,8 +70,8 @@ public class StereographicActivity extends AppCompatActivity {
                 final String image_3 = ActivityMain.DIR + "image_3.jpg";
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_3,
-                        TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 200, 0.8f);
+                        ImagesStitch.TYPE_PLANE, ImagesStitch.WAVE_VERT,
+                        0.16f, 0.05f, 200, 0.8f,90);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -87,8 +86,8 @@ public class StereographicActivity extends AppCompatActivity {
                 final String image_4 = ActivityMain.DIR + "image_4.jpg";
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_4,
-                        TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 200, 0.8f);
+                        ImagesStitch.TYPE_PLANE, ImagesStitch.WAVE_VERT,
+                        0.16f, 0.05f, 200, 0.8f,90);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -102,8 +101,8 @@ public class StereographicActivity extends AppCompatActivity {
                 final String image_5 = ActivityMain.DIR + "image_5.jpg";
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_5,
-                        TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 200, 0.8f);
+                        ImagesStitch.TYPE_PLANE, ImagesStitch.WAVE_VERT,
+                        0.16f, 0.05f, 200, 0.8f,90);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -116,8 +115,8 @@ public class StereographicActivity extends AppCompatActivity {
                 final String image_6 = ActivityMain.DIR + "image_6.jpg";
 
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, image_6,
-                        TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.16f, 0.05f, 200, 0.8f);
+                        ImagesStitch.TYPE_PLANE, ImagesStitch.WAVE_VERT,
+                        0.16f, 0.05f, 200, 0.8f,90);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -139,8 +138,8 @@ public class StereographicActivity extends AppCompatActivity {
 
                 final String result = ActivityMain.DIR + "result.jpg";
                 ImagesStitch.stitchImagesFromBitmaps(bitmaps, result,
-                        ImagesStitch.TYPE_STEREOGRAPHIC, ImagesStitch.CORRECTION_DEFAULT,
-                        0.2f, 0.2f, 50, 0.6f);
+                        ImagesStitch.TYPE_STEREOGRAPHIC, ImagesStitch.WAVE_DEFAULT,
+                        0.2f, 0.2f, 50, 0.6f,0);
 
                 runOnUiThread(new Runnable() {
                     @Override

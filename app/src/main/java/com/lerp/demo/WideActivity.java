@@ -35,10 +35,10 @@ public class WideActivity extends AppCompatActivity {
                 bitmaps[4] = BitmapUtils.getBitmap(WideActivity.this, "medium10.jpg");
                 bitmaps[5] = BitmapUtils.getBitmap(WideActivity.this, "medium11.jpg");
 
-                final String result = ActivityMain.DIR + "nine.jpg";
+                final String result = ActivityMain.DIR + "wide.jpg";
                 int[] ints = ImagesStitch.stitchImagesFromBitmaps(bitmaps, result,
-                        ImagesStitch.TYPE_SPHERICAL, ImagesStitch.CORRECTION_DEFAULT,
-                        0.1f, 0.1f, 50, 1f);
+                        ImagesStitch.TYPE_SPHERICAL, ImagesStitch.WAVE_DEFAULT,
+                        0.1f, 0.1f, 50, 1f, 0);
 
                 if (ints[0] == 0 && !WideActivity.this.isDestroyed()) {
                     WideActivity.this.runOnUiThread(new Runnable() {

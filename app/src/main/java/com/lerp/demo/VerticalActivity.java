@@ -34,8 +34,8 @@ public class VerticalActivity extends AppCompatActivity {
 
                 final String result = ActivityMain.DIR + "vertical.jpg";
                 int[] ints = ImagesStitch.stitchImagesFromBitmaps(bitmaps, result,
-                        ImagesStitch.TYPE_LINEAR, ImagesStitch.CORRECTION_VERT,
-                        0.4f, 0.03f, 50, 1f);
+                        ImagesStitch.TYPE_PLANE, ImagesStitch.WAVE_VERT,
+                        0.4f, 0.03f, 50, 1f, 90);
 
                 if (ints[0] == 0 && !VerticalActivity.this.isDestroyed()) {
                     VerticalActivity.this.runOnUiThread(new Runnable() {
